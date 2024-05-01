@@ -4,10 +4,11 @@ import {
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
 import { Button } from '@/app/common/button';
+import { createInvoice } from '@/lib/actions';
 
 export default function Form({ advocates }: { advocates: Advocate[] }) {
   return (
-    <form>
+    <form action={createInvoice}> 
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* advocate Name */}
         <div className="mb-4">
@@ -22,7 +23,7 @@ export default function Form({ advocates }: { advocates: Advocate[] }) {
               defaultValue=""
             >
               <option value="" disabled>
-                Select a advocate
+                Select an advocate
               </option>
               {advocates.map((advocate) => (
                 <option key={advocate.id} value={advocate.id}>
@@ -53,7 +54,7 @@ export default function Form({ advocates }: { advocates: Advocate[] }) {
       </div>
       <div className="mt-6 flex justify-end gap-4">
         <Link
-          href="/dashboard/notes"
+          href="/dashboard"
           className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
         >
           Cancel
