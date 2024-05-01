@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { Note } from '@/app/lib/definitions';
+import { Note } from '@/lib/definitions';
 
 export default async function CurrentNotes({
   currentNotes,
