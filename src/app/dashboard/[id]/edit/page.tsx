@@ -25,6 +25,7 @@ export default async function EditNoteForm( {params }: { params: { id: string } 
                 name="advocateId"
                 className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
                 defaultValue={note.advocate_id}
+                required
                 >
                 <option value="" disabled>
                     Select a advocate
@@ -52,6 +53,9 @@ export default async function EditNoteForm( {params }: { params: { id: string } 
                     defaultValue={note.note}
                     placeholder="Enter Note"
                     className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                    minLength={20}
+                    maxLength={300}
+                    required
                 />
                 </div>
             </div>
