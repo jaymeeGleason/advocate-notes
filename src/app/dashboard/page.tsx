@@ -1,9 +1,6 @@
-import { getNotes } from '@/lib/data';
-import Notes from './current-notes';
-
+import NoteTable from './note-table';
 export default async function Page() {
-    const notes = await getNotes();
     return <main>
-        <Notes currentNotes={notes}/>
+        <NoteTable/>
     </main>
   }

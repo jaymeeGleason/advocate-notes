@@ -13,8 +13,9 @@ const FormSchema = z.object({
 });
  
 const CreateNote = FormSchema.omit({ id: true, date: true });
+const UpdateNote = FormSchema.omit({ id: true, date: true });
 
-export async function createInvoice(formData: FormData) {
+export async function createNote(formData: FormData) {
     const { advocateId, note } = CreateNote.parse({
         advocateId: formData.get('advocateId'),
         note: formData.get('note')
@@ -27,5 +28,19 @@ export async function createInvoice(formData: FormData) {
   `;
   revalidatePath('/dashboard');
   redirect('/dashboard');
+}
 
+export async function updateNote(id: string, formData: FormData) {
+    const { advocateId, note } = UpdateNote.parse({
+        advocateId: formData.get('advocateId'),
+        note: formData.get('note')
+    });
+
+    await sql`
+    UPDATE notes
+    SET advocate_id = ${advocateId}, note = ${note}
+    WHERE id = ${id}
+  `;
+  revalidatePath('/dashboard');
+  redirect('/dashboard');
 }

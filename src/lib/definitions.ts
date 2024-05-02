@@ -7,8 +7,9 @@ export type Advocate = {
   
   export type Note = {
     id: string;
-    customer_id: string;
+    advocate_id: string;
     note: string;
+    date: string;
   };
   
   export type AdvocateNotesTable = {
@@ -18,6 +19,12 @@ export type Advocate = {
     email: string;
     note: string;
     date: string;
+  };
+
+  export type NoteForm = {
+    id: string;
+    advocate_id: string;
+    note: string;
   };
   
   

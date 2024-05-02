@@ -14,6 +14,17 @@ export async function getNotes() {
     }
 }
 
+export async function getNote(id: string) {
+    try {
+        const data = await sql<Note>`SELECT * FROM notes where id = ${id}`;
+        console.log(data);
+        return data.rows;
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch note.');
+    }
+}
+
 export async function getAdvocates() {
     try {
         const data = await sql<Advocate>`SELECT * FROM advocates`;
