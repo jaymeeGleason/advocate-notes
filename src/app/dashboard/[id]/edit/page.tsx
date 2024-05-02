@@ -23,7 +23,7 @@ export default async function EditNoteForm( {params }: { params: { id: string } 
                 <select
                 id="advocate"
                 name="advocateId"
-                className="peer block flex-1 cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
                 defaultValue={note.advocate_id}
                 required
                 >
@@ -51,7 +51,7 @@ export default async function EditNoteForm( {params }: { params: { id: string } 
                     name="note"
                     defaultValue={note.note}
                     placeholder="Enter Note"
-                    className="peer block flex-1 rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                    className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
                     minLength={20}
                     maxLength={300}
                     required
