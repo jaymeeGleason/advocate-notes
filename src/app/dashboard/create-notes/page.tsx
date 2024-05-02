@@ -5,7 +5,7 @@ export default async function Page() {
   const advocates = await getAdvocates();
 
   return <main>
-    <p>Notes Page</p>
+    <p className="text-2xl">Create a New Note</p>
     <CreateNote advocates={advocates}/>
   </main>
   }

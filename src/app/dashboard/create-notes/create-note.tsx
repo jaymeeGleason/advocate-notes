@@ -10,7 +10,6 @@ export default function Form({ advocates }: { advocates: Advocate[] }) {
   return (
     <form action={createNote}> 
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
-        {/* advocate Name */}
         <div className="mb-4">
           <label htmlFor="advocate" className="mb-2 block text-sm font-medium">
             Choose advocate

@@ -54,7 +54,7 @@ export default async function NotesTable() {
                   <td className="whitespace-nowrap px-3 py-3">
                     {note.id}
                   </td>
-                  <td className="whitespace-wrap px-3 py-3">
+                  <td className="whitespace-nowrap px-3 py-3">
                     {note.note}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">

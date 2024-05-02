@@ -7,8 +7,18 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { ListBulletIcon } from '@heroicons/react/20/solid';
 const links = [
-  { name: 'Home', href: '/dashboard', icon: HomeIcon },
+  { 
+    name: 'Home', 
+    href: '/', 
+    icon: HomeIcon 
+  },
+  { 
+    name: 'Dashboard', 
+    href: '/dashboard', 
+    icon: ListBulletIcon 
+  },
   {
     name: 'Create Notes',
     href: '/dashboard/create-notes',
