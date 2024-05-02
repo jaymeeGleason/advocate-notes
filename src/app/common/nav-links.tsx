@@ -10,8 +10,8 @@ import clsx from 'clsx';
 const links = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
-    name: 'Notes',
-    href: '/dashboard/notes',
+    name: 'Create Notes',
+    href: '/dashboard/create-notes',
     icon: DocumentIcon,
   },
 ];
