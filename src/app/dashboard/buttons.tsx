@@ -1,5 +1,6 @@
 import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { deleteNote } from '@/lib/actions';
 
 export function CreateNote() {
   return (
@@ -25,12 +26,13 @@ export function UpdateNote({ id }: { id: string }) {
 }
 
 export function DeleteNote({ id }: { id: string }) {
+  const deleteNoteWithId = deleteNote.bind(null, id);
   return (
-    <>
+    <form action={deleteNoteWithId}>
       <button className="rounded-md border p-2 hover:bg-gray-100">
         <span className="sr-only">Delete</span>
         <TrashIcon className="w-5" />
       </button>
-    </>
+    </form>
   );
 }
