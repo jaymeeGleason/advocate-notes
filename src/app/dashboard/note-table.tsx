@@ -51,16 +51,16 @@ export default async function NotesTable() {
                   key={note.id}
                   className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
                 >
-                  <td className="whitespace-nowrap px-3 py-3">
+                  <td className="text-wrap px-3 py-3">
                     {note.id}
                   </td>
-                  <td className="whitespace-nowrap px-3 py-3">
+                  <td className="text-wrap">
                     {note.note}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
                     {formatDateToLocal(note.date)}
                   </td>
-                  <td className="whitespace-nowrap py-3 pl-6 pr-3">
+                  <td className="text-wrap py-3 pl-6 pr-3">
                     <div className="flex justify-end gap-3">
                       <UpdateNote id={note.id} />
                       <DeleteNote id={note.id} />
