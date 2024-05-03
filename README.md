@@ -16,21 +16,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployed on Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[https://advocate-notes.vercel.app](https://advocate-notes.vercel.app)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Struggles / Incomplete 
+Not using NextJs before was a bit of a stuggle, but there are many tutorials and videos I was able to find along with the documentation that was really helpful.  I am also using tailwindCss for the first time in this project and I am not sure I LOVE the inline styling. Tailwind was super easy to pick up which I liked, but some of the inline styling seems a bit much.  I would definitely have cleaned that up if I had more time.  I did start to incorporate a login/logout that I found in a tutorial, but I was not able to get it to completely get it to work in the timeframe that I had.  This is something I will definitely go back and finish in my own time.  Overall, I am pretty happy with my solution.
