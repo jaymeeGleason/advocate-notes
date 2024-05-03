@@ -28,7 +28,7 @@ export default async function EditNoteForm( {params }: { params: { id: string } 
                 required
                 >
                 <option value="" disabled>
-                    Select a advocate
+                    Select an advocate
                 </option>
                 {advocates.map((advocate) => (
                     <option key={advocate.id} value={advocate.id}>
@@ -42,7 +42,7 @@ export default async function EditNoteForm( {params }: { params: { id: string } 
 
             <div className="mb-4">
             <label htmlFor="note" className="mb-2 block text-sm font-medium">
-                Choose an note
+                Write a note
             </label>
             <div className="relative mt-2 rounded-md">
                 <div className="relative">
@@ -55,6 +55,7 @@ export default async function EditNoteForm( {params }: { params: { id: string } 
                     minLength={20}
                     maxLength={300}
                     required
+
                 />
                 </div>
             </div>

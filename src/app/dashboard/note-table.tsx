@@ -1,33 +1,20 @@
 import { UpdateNote, DeleteNote } from '@/app/dashboard/buttons';
 import { formatDateToLocal } from '@/lib/utils';
-import { getNotes } from '@/lib/data';
+import { getFilteredNotes } from '@/lib/data';
 
-export default async function NotesTable() {
-  const notes = await getNotes();
+export default async function NotesTable({
+  query,
+  currentPage,
+}: {
+  query: string;
+  currentPage: number;
+}) {
+  const notes = await getFilteredNotes(query, currentPage);
 
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
-          <div className="md:hidden">
-            {notes?.map((note) => (
-              <div
-                key={note.id}
-                className="mb-2 w-full rounded-md bg-white p-4"
-              >
-               
-                <div className="flex w-full items-center justify-between pt-4">
-                  <div>
-                    <p>{formatDateToLocal(note.date)}</p>
-                  </div>
-                  <div className="flex justify-end gap-2">
-                    <UpdateNote id={note.id} />
-                    <DeleteNote id={note.id} />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
           <table className="hidden min-w-full text-gray-900 md:table">
             <thead className="rounded-lg text-left text-sm font-normal">
               <tr>
